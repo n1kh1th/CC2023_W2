@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>To-Do List</title>
+</head>
+<body>
+  <div class="topdiv">
+    <div class="container">
+        <div class="title"><h1><b><u>To-Do List</u></b></h1></div>
+        <div>
+          <label for="task">Add a Task:</label>
+          <input type="text" id="task" placeholder="Enter your to-do">
+          <label for="category">Category:</label>
+          <select id="category">
+            <option value="personal">Personal</option>
+            <option value="work">Work</option>
+            <option value="others">Others</option>
+          </select>
+          <label for="deadline">Deadline:</label>
+          <input type="datetime-local" id="deadline">
+          <button onclick="addTodo()">Add To-Do</button>
+        </div>
+        <div>
+          <h2><u><b>Your To-Do List</b></u></h2>
+          <div id="todos" class="todos"></div>
+          <button onclick="filterToDo('all')">All</button>
+          <button onclick="filterToDo('personal')">Personal</button>
+          <button onclick="filterToDo('work')">Work</button>
+          <button onclick="filterToDo('others')">Others</button>
+        </div>
+      </div>
+  </div>
+  <footer>
+    <style>
+        footer{
+            background-color: rgba(245, 245, 245, 0.515);
+            margin:0px;
+            padding: 0px;
+            height: 10vh;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-align: center;
+        }
+    </style>
+    <p><b>Done by Nikhith, Tuesday, 19 December 2023</b></p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
